@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{c6db9895-65be-4890-87ed-df7dcaa29025}</ProjectGuid>
+    <RootNamespace>HackAPPdata</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)3rdparts;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(ProjectDir)lib\Output\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>cryptlib.lib;sqlitelib.lib;Crypt32.lib</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)3rdparts;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(ProjectDir)lib\Output\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>cryptlib.lib;sqlitelib.lib;Crypt32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="3rdparts\cryptopp\3way.h" />
+    <ClInclude Include="3rdparts\cryptopp\adler32.h" />
+    <ClInclude Include="3rdparts\cryptopp\adv_simd.h" />
+    <ClInclude Include="3rdparts\cryptopp\aes.h" />
+    <ClInclude Include="3rdparts\cryptopp\aes_armv4.h" />
+    <ClInclude Include="3rdparts\cryptopp\algebra.h" />
+    <ClInclude Include="3rdparts\cryptopp\algparam.h" />
+    <ClInclude Include="3rdparts\cryptopp\allocate.h" />
+    <ClInclude Include="3rdparts\cryptopp\arc4.h" />
+    <ClInclude Include="3rdparts\cryptopp\argnames.h" />
+    <ClInclude Include="3rdparts\cryptopp\aria.h" />
+    <ClInclude Include="3rdparts\cryptopp\arm_simd.h" />
+    <ClInclude Include="3rdparts\cryptopp\asn.h" />
+    <ClInclude Include="3rdparts\cryptopp\authenc.h" />
+    <ClInclude Include="3rdparts\cryptopp\base32.h" />
+    <ClInclude Include="3rdparts\cryptopp\base64.h" />
+    <ClInclude Include="3rdparts\cryptopp\basecode.h" />
+    <ClInclude Include="3rdparts\cryptopp\bench.h" />
+    <ClInclude Include="3rdparts\cryptopp\blake2.h" />
+    <ClInclude Include="3rdparts\cryptopp\blowfish.h" />
+    <ClInclude Include="3rdparts\cryptopp\blumshub.h" />
+    <ClInclude Include="3rdparts\cryptopp\camellia.h" />
+    <ClInclude Include="3rdparts\cryptopp\cast.h" />
+    <ClInclude Include="3rdparts\cryptopp\cbcmac.h" />
+    <ClInclude Include="3rdparts\cryptopp\ccm.h" />
+    <ClInclude Include="3rdparts\cryptopp\chacha.h" />
+    <ClInclude Include="3rdparts\cryptopp\chachapoly.h" />
+    <ClInclude Include="3rdparts\cryptopp\cham.h" />
+    <ClInclude Include="3rdparts\cryptopp\channels.h" />
+    <ClInclude Include="3rdparts\cryptopp\cmac.h" />
+    <ClInclude Include="3rdparts\cryptopp\config.h" />
+    <ClInclude Include="3rdparts\cryptopp\config_align.h" />
+    <ClInclude Include="3rdparts\cryptopp\config_asm.h" />
+    <ClInclude Include="3rdparts\cryptopp\config_cpu.h" />
+    <ClInclude Include="3rdparts\cryptopp\config_cxx.h" />
+    <ClInclude Include="3rdparts\cryptopp\config_dll.h" />
+    <ClInclude Include="3rdparts\cryptopp\config_int.h" />
+    <ClInclude Include="3rdparts\cryptopp\config_misc.h" />
+    <ClInclude Include="3rdparts\cryptopp\config_ns.h" />
+    <ClInclude Include="3rdparts\cryptopp\config_os.h" />
+    <ClInclude Include="3rdparts\cryptopp\config_ver.h" />
+    <ClInclude Include="3rdparts\cryptopp\cpu.h" />
+    <ClInclude Include="3rdparts\cryptopp\crc.h" />
+    <ClInclude Include="3rdparts\cryptopp\cryptlib.h" />
+    <ClInclude Include="3rdparts\cryptopp\darn.h" />
+    <ClInclude Include="3rdparts\cryptopp\default.h" />
+    <ClInclude Include="3rdparts\cryptopp\des.h" />
+    <ClInclude Include="3rdparts\cryptopp\dh.h" />
+    <ClInclude Include="3rdparts\cryptopp\dh2.h" />
+    <ClInclude Include="3rdparts\cryptopp\dll.h" />
+    <ClInclude Include="3rdparts\cryptopp\dmac.h" />
+    <ClInclude Include="3rdparts\cryptopp\donna.h" />
+    <ClInclude Include="3rdparts\cryptopp\donna_32.h" />
+    <ClInclude Include="3rdparts\cryptopp\donna_64.h" />
+    <ClInclude Include="3rdparts\cryptopp\donna_sse.h" />
+    <ClInclude Include="3rdparts\cryptopp\drbg.h" />
+    <ClInclude Include="3rdparts\cryptopp\dsa.h" />
+    <ClInclude Include="3rdparts\cryptopp\eax.h" />
+    <ClInclude Include="3rdparts\cryptopp\ec2n.h" />
+    <ClInclude Include="3rdparts\cryptopp\eccrypto.h" />
+    <ClInclude Include="3rdparts\cryptopp\ecp.h" />
+    <ClInclude Include="3rdparts\cryptopp\ecpoint.h" />
+    <ClInclude Include="3rdparts\cryptopp\elgamal.h" />
+    <ClInclude Include="3rdparts\cryptopp\emsa2.h" />
+    <ClInclude Include="3rdparts\cryptopp\eprecomp.h" />
+    <ClInclude Include="3rdparts\cryptopp\esign.h" />
+    <ClInclude Include="3rdparts\cryptopp\factory.h" />
+    <ClInclude Include="3rdparts\cryptopp\fhmqv.h" />
+    <ClInclude Include="3rdparts\cryptopp\files.h" />
+    <ClInclude Include="3rdparts\cryptopp\filters.h" />
+    <ClInclude Include="3rdparts\cryptopp\fips140.h" />
+    <ClInclude Include="3rdparts\cryptopp\fltrimpl.h" />
+    <ClInclude Include="3rdparts\cryptopp\gcm.h" />
+    <ClInclude Include="3rdparts\cryptopp\gf256.h" />
+    <ClInclude Include="3rdparts\cryptopp\gf2n.h" />
+    <ClInclude Include="3rdparts\cryptopp\gf2_32.h" />
+    <ClInclude Include="3rdparts\cryptopp\gfpcrypt.h" />
+    <ClInclude Include="3rdparts\cryptopp\gost.h" />
+    <ClInclude Include="3rdparts\cryptopp\gzip.h" />
+    <ClInclude Include="3rdparts\cryptopp\hashfwd.h" />
+    <ClInclude Include="3rdparts\cryptopp\hc128.h" />
+    <ClInclude Include="3rdparts\cryptopp\hc256.h" />
+    <ClInclude Include="3rdparts\cryptopp\hex.h" />
+    <ClInclude Include="3rdparts\cryptopp\hight.h" />
+    <ClInclude Include="3rdparts\cryptopp\hkdf.h" />
+    <ClInclude Include="3rdparts\cryptopp\hmac.h" />
+    <ClInclude Include="3rdparts\cryptopp\hmqv.h" />
+    <ClInclude Include="3rdparts\cryptopp\hrtimer.h" />
+    <ClInclude Include="3rdparts\cryptopp\ida.h" />
+    <ClInclude Include="3rdparts\cryptopp\idea.h" />
+    <ClInclude Include="3rdparts\cryptopp\integer.h" />
+    <ClInclude Include="3rdparts\cryptopp\iterhash.h" />
+    <ClInclude Include="3rdparts\cryptopp\kalyna.h" />
+    <ClInclude Include="3rdparts\cryptopp\keccak.h" />
+    <ClInclude Include="3rdparts\cryptopp\lea.h" />
+    <ClInclude Include="3rdparts\cryptopp\lsh.h" />
+    <ClInclude Include="3rdparts\cryptopp\lubyrack.h" />
+    <ClInclude Include="3rdparts\cryptopp\luc.h" />
+    <ClInclude Include="3rdparts\cryptopp\mars.h" />
+    <ClInclude Include="3rdparts\cryptopp\md2.h" />
+    <ClInclude Include="3rdparts\cryptopp\md4.h" />
+    <ClInclude Include="3rdparts\cryptopp\md5.h" />
+    <ClInclude Include="3rdparts\cryptopp\mdc.h" />
+    <ClInclude Include="3rdparts\cryptopp\mersenne.h" />
+    <ClInclude Include="3rdparts\cryptopp\misc.h" />
+    <ClInclude Include="3rdparts\cryptopp\modarith.h" />
+    <ClInclude Include="3rdparts\cryptopp\modes.h" />
+    <ClInclude Include="3rdparts\cryptopp\modexppc.h" />
+    <ClInclude Include="3rdparts\cryptopp\mqueue.h" />
+    <ClInclude Include="3rdparts\cryptopp\mqv.h" />
+    <ClInclude Include="3rdparts\cryptopp\naclite.h" />
+    <ClInclude Include="3rdparts\cryptopp\nbtheory.h" />
+    <ClInclude Include="3rdparts\cryptopp\nr.h" />
+    <ClInclude Include="3rdparts\cryptopp\oaep.h" />
+    <ClInclude Include="3rdparts\cryptopp\oids.h" />
+    <ClInclude Include="3rdparts\cryptopp\osrng.h" />
+    <ClInclude Include="3rdparts\cryptopp\ossig.h" />
+    <ClInclude Include="3rdparts\cryptopp\padlkrng.h" />
+    <ClInclude Include="3rdparts\cryptopp\panama.h" />
+    <ClInclude Include="3rdparts\cryptopp\pch.h" />
+    <ClInclude Include="3rdparts\cryptopp\pem.h" />
+    <ClInclude Include="3rdparts\cryptopp\pem_common.h" />
+    <ClInclude Include="3rdparts\cryptopp\pkcspad.h" />
+    <ClInclude Include="3rdparts\cryptopp\poly1305.h" />
+    <ClInclude Include="3rdparts\cryptopp\polynomi.h" />
+    <ClInclude Include="3rdparts\cryptopp\ppc_simd.h" />
+    <ClInclude Include="3rdparts\cryptopp\pssr.h" />
+    <ClInclude Include="3rdparts\cryptopp\pubkey.h" />
+    <ClInclude Include="3rdparts\cryptopp\pwdbased.h" />
+    <ClInclude Include="3rdparts\cryptopp\queue.h" />
+    <ClInclude Include="3rdparts\cryptopp\rabbit.h" />
+    <ClInclude Include="3rdparts\cryptopp\rabin.h" />
+    <ClInclude Include="3rdparts\cryptopp\randpool.h" />
+    <ClInclude Include="3rdparts\cryptopp\rc2.h" />
+    <ClInclude Include="3rdparts\cryptopp\rc5.h" />
+    <ClInclude Include="3rdparts\cryptopp\rc6.h" />
+    <ClInclude Include="3rdparts\cryptopp\rdrand.h" />
+    <ClInclude Include="3rdparts\cryptopp\resource.h" />
+    <ClInclude Include="3rdparts\cryptopp\rijndael.h" />
+    <ClInclude Include="3rdparts\cryptopp\ripemd.h" />
+    <ClInclude Include="3rdparts\cryptopp\rng.h" />
+    <ClInclude Include="3rdparts\cryptopp\rsa.h" />
+    <ClInclude Include="3rdparts\cryptopp\rw.h" />
+    <ClInclude Include="3rdparts\cryptopp\safer.h" />
+    <ClInclude Include="3rdparts\cryptopp\salsa.h" />
+    <ClInclude Include="3rdparts\cryptopp\scrypt.h" />
+    <ClInclude Include="3rdparts\cryptopp\seal.h" />
+    <ClInclude Include="3rdparts\cryptopp\secblock.h" />
+    <ClInclude Include="3rdparts\cryptopp\secblockfwd.h" />
+    <ClInclude Include="3rdparts\cryptopp\seckey.h" />
+    <ClInclude Include="3rdparts\cryptopp\seed.h" />
+    <ClInclude Include="3rdparts\cryptopp\serpent.h" />
+    <ClInclude Include="3rdparts\cryptopp\serpentp.h" />
+    <ClInclude Include="3rdparts\cryptopp\sha.h" />
+    <ClInclude Include="3rdparts\cryptopp\sha1_armv4.h" />
+    <ClInclude Include="3rdparts\cryptopp\sha256_armv4.h" />
+    <ClInclude Include="3rdparts\cryptopp\sha3.h" />
+    <ClInclude Include="3rdparts\cryptopp\sha512_armv4.h" />
+    <ClInclude Include="3rdparts\cryptopp\shacal2.h" />
+    <ClInclude Include="3rdparts\cryptopp\shake.h" />
+    <ClInclude Include="3rdparts\cryptopp\shark.h" />
+    <ClInclude Include="3rdparts\cryptopp\simeck.h" />
+    <ClInclude Include="3rdparts\cryptopp\simon.h" />
+    <ClInclude Include="3rdparts\cryptopp\simple.h" />
+    <ClInclude Include="3rdparts\cryptopp\siphash.h" />
+    <ClInclude Include="3rdparts\cryptopp\skipjack.h" />
+    <ClInclude Include="3rdparts\cryptopp\sm3.h" />
+    <ClInclude Include="3rdparts\cryptopp\sm4.h" />
+    <ClInclude Include="3rdparts\cryptopp\smartptr.h" />
+    <ClInclude Include="3rdparts\cryptopp\sosemanuk.h" />
+    <ClInclude Include="3rdparts\cryptopp\speck.h" />
+    <ClInclude Include="3rdparts\cryptopp\square.h" />
+    <ClInclude Include="3rdparts\cryptopp\stdcpp.h" />
+    <ClInclude Include="3rdparts\cryptopp\strciphr.h" />
+    <ClInclude Include="3rdparts\cryptopp\tea.h" />
+    <ClInclude Include="3rdparts\cryptopp\threefish.h" />
+    <ClInclude Include="3rdparts\cryptopp\tiger.h" />
+    <ClInclude Include="3rdparts\cryptopp\trap.h" />
+    <ClInclude Include="3rdparts\cryptopp\trunhash.h" />
+    <ClInclude Include="3rdparts\cryptopp\ttmac.h" />
+    <ClInclude Include="3rdparts\cryptopp\tweetnacl.h" />
+    <ClInclude Include="3rdparts\cryptopp\twofish.h" />
+    <ClInclude Include="3rdparts\cryptopp\validate.h" />
+    <ClInclude Include="3rdparts\cryptopp\vmac.h" />
+    <ClInclude Include="3rdparts\cryptopp\wake.h" />
+    <ClInclude Include="3rdparts\cryptopp\whrlpool.h" />
+    <ClInclude Include="3rdparts\cryptopp\words.h" />
+    <ClInclude Include="3rdparts\cryptopp\x509cert.h" />
+    <ClInclude Include="3rdparts\cryptopp\xed25519.h" />
+    <ClInclude Include="3rdparts\cryptopp\xtr.h" />
+    <ClInclude Include="3rdparts\cryptopp\xtrcrypt.h" />
+    <ClInclude Include="3rdparts\cryptopp\xts.h" />
+    <ClInclude Include="3rdparts\cryptopp\zdeflate.h" />
+    <ClInclude Include="3rdparts\cryptopp\zinflate.h" />
+    <ClInclude Include="3rdparts\cryptopp\zlib.h" />
+    <ClInclude Include="3rdparts\rapidjson\allocators.h" />
+    <ClInclude Include="3rdparts\rapidjson\cursorstreamwrapper.h" />
+    <ClInclude Include="3rdparts\rapidjson\document.h" />
+    <ClInclude Include="3rdparts\rapidjson\encodedstream.h" />
+    <ClInclude Include="3rdparts\rapidjson\encodings.h" />
+    <ClInclude Include="3rdparts\rapidjson\error\en.h" />
+    <ClInclude Include="3rdparts\rapidjson\error\error.h" />
+    <ClInclude Include="3rdparts\rapidjson\filereadstream.h" />
+    <ClInclude Include="3rdparts\rapidjson\filewritestream.h" />
+    <ClInclude Include="3rdparts\rapidjson\fwd.h" />
+    <ClInclude Include="3rdparts\rapidjson\internal\biginteger.h" />
+    <ClInclude Include="3rdparts\rapidjson\internal\clzll.h" />
+    <ClInclude Include="3rdparts\rapidjson\internal\diyfp.h" />
+    <ClInclude Include="3rdparts\rapidjson\internal\dtoa.h" />
+    <ClInclude Include="3rdparts\rapidjson\internal\ieee754.h" />
+    <ClInclude Include="3rdparts\rapidjson\internal\itoa.h" />
+    <ClInclude Include="3rdparts\rapidjson\internal\meta.h" />
+    <ClInclude Include="3rdparts\rapidjson\internal\pow10.h" />
+    <ClInclude Include="3rdparts\rapidjson\internal\regex.h" />
+    <ClInclude Include="3rdparts\rapidjson\internal\stack.h" />
+    <ClInclude Include="3rdparts\rapidjson\internal\strfunc.h" />
+    <ClInclude Include="3rdparts\rapidjson\internal\strtod.h" />
+    <ClInclude Include="3rdparts\rapidjson\internal\swap.h" />
+    <ClInclude Include="3rdparts\rapidjson\istreamwrapper.h" />
+    <ClInclude Include="3rdparts\rapidjson\memorybuffer.h" />
+    <ClInclude Include="3rdparts\rapidjson\memorystream.h" />
+    <ClInclude Include="3rdparts\rapidjson\msinttypes\inttypes.h" />
+    <ClInclude Include="3rdparts\rapidjson\msinttypes\stdint.h" />
+    <ClInclude Include="3rdparts\rapidjson\ostreamwrapper.h" />
+    <ClInclude Include="3rdparts\rapidjson\pointer.h" />
+    <ClInclude Include="3rdparts\rapidjson\prettywriter.h" />
+    <ClInclude Include="3rdparts\rapidjson\rapidjson.h" />
+    <ClInclude Include="3rdparts\rapidjson\reader.h" />
+    <ClInclude Include="3rdparts\rapidjson\schema.h" />
+    <ClInclude Include="3rdparts\rapidjson\stream.h" />
+    <ClInclude Include="3rdparts\rapidjson\stringbuffer.h" />
+    <ClInclude Include="3rdparts\rapidjson\uri.h" />
+    <ClInclude Include="3rdparts\rapidjson\writer.h" />
+    <ClInclude Include="3rdparts\SQLiteCpp\Assertion.h" />
+    <ClInclude Include="3rdparts\SQLiteCpp\Backup.h" />
+    <ClInclude Include="3rdparts\SQLiteCpp\Column.h" />
+    <ClInclude Include="3rdparts\SQLiteCpp\Database.h" />
+    <ClInclude Include="3rdparts\SQLiteCpp\Exception.h" />
+    <ClInclude Include="3rdparts\SQLiteCpp\ExecuteMany.h" />
+    <ClInclude Include="3rdparts\SQLiteCpp\Savepoint.h" />
+    <ClInclude Include="3rdparts\SQLiteCpp\SQLiteCpp.h" />
+    <ClInclude Include="3rdparts\SQLiteCpp\SQLiteCppExport.h" />
+    <ClInclude Include="3rdparts\SQLiteCpp\Statement.h" />
+    <ClInclude Include="3rdparts\SQLiteCpp\Transaction.h" />
+    <ClInclude Include="3rdparts\SQLiteCpp\Utils.h" />
+    <ClInclude Include="3rdparts\SQLiteCpp\VariadicBind.h" />
+    <ClInclude Include="appdata\appdata.h" />
+    <ClInclude Include="app\app.h" />
+    <ClInclude Include="app\chrome\chrome.h" />
+    <ClInclude Include="crypto\crypto.h" />
+    <ClInclude Include="src\api\api.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="appdata\cookie\cookie.cpp" />
+    <ClCompile Include="app\app.cpp" />
+    <ClCompile Include="app\app_windows.cpp" />
+    <ClCompile Include="app\chrome\chrome.cpp" />
+    <ClCompile Include="app\chrome\chrome_windows.cpp" />
+    <ClCompile Include="crypto\crypto_windows.cpp" />
+    <ClCompile Include="src\api\api.cpp" />
+    <ClCompile Include="src\main.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
